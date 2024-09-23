@@ -1,32 +1,32 @@
 //Fibonacci Algorithm
-let cur = 1;
-let prev = 0;
+// let cur = 1;
+// let prev = 0;
 
-console.log(cur, prev);
+// console.log(cur, prev);
 
-for (let i = 0; i < 1; i++) {
-  let next = cur + prev;
-  console.log(next);
-  prev = cur;
-  cur = next;
-}
+// for (let i = 0; i < 1; i++) {
+//   let next = cur + prev;
+//   console.log(next);
+//   prev = cur;
+//   cur = next;
+// }
 // Using Recursion
 
-console.log(0, 1);
-count = 2;
-let cur1 = 1;
-let prev1 = 0;
-const Fibonacci = (n) => {
-  while (count < n) {
-    let next = cur1 + prev1;
-    console.log(next);
-    prev1 = cur1;
-    cur1 = next;
-    count++;
-    Fibonacci(n);
-  }
-};
-Fibonacci(1);
+// console.log(0, 1);
+// count = 2;
+// let cur1 = 1;
+// let prev1 = 0;
+// const Fibonacci = (n) => {
+//   while (count < n) {
+//     let next = cur1 + prev1;
+//     console.log(next);
+//     prev1 = cur1;
+//     cur1 = next;
+//     count++;
+//     Fibonacci(n);
+//   }
+// };
+// Fibonacci(1);
 
 //Lowest Value from the array
 let a = Math.floor(Math.random() * 100);
@@ -37,29 +37,28 @@ let e = Math.floor(Math.random() * 100);
 let f = Math.floor(Math.random() * 100);
 let g = Math.floor(Math.random() * 100);
 let arr = [a, b, c, d, e, f, g];
-function Fibonacci(arr) {
-  let min = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-  }
-  console.log(`The lowers in the ${arr} is ${min}`);
+// function Fibonacci(arr) {
+//   let min = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//   }
+//   console.log(`The lowers in the ${arr} is ${min}`);
 
-  //Buble Sort
-  function BubbleSort(arr) {
-    console.log(`Before sorting the array was ${arr}`);
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = i; j < arr.length - 1; j++) {
-        if (arr[i] > arr[j + 1]) {
-          let temp = arr[i];
-          arr[i] = arr[j + 1];
-          arr[j + 1] = temp;
-        }
+//Buble Sort
+function BubbleSort(arr) {
+  console.log(`Before sorting the array was ${arr}`);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length - 1; j++) {
+      if (arr[i] > arr[j + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[j + 1];
+        arr[j + 1] = temp;
       }
     }
-    console.log(`After sorting the array is ${arr}`);
   }
+  console.log(`After sorting the array is ${arr}`);
 }
 
 // quick sort
@@ -96,3 +95,26 @@ function QuickSort(arr, low, high) {
   }
   console.log(`After sorting the array is ${arr}`);
 }
+
+function BinarySearch(arr, target) {
+  function binarysearch(arr, target) {
+    let low = 0;
+    let high = arr.length - 1;
+
+    while (low <= high) {
+      let middle = Math.floor((low + high) / 2);
+      if (target == arr[middle]) return middle;
+
+      if (target > arr[middle]) {
+        low = middle + 1;
+      } else {
+        high = middle - 1;
+      }
+    }
+    return -1;
+  }
+  let res = binarysearch(arr, target);
+  console.log(res);
+}
+let brr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+BinarySearch(brr, 6);
