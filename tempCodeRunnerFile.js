@@ -1,1 +1,10 @@
-console.log(cur, prev);
+newArray.push("hi");
+newArray.push("konichiwa");
+newArray.push("hey");
+newArray.push("greeting");
+newArray.push("howdy");
+newArray.push("ciao");
+newArray.push("salut");
+newArray.push("hola");
+newArray.push("bonjour");
+newArray.push("hallo");
