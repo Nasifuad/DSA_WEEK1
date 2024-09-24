@@ -8,6 +8,25 @@ class MyArray {
     this.length++;
     return this.length;
   }
+  get(index) {
+    return this.array[index];
+  }
+  pop() {
+    for (let i = 0; i < this.length; i++) {
+      this.array[i] = this.array[i + 1];
+    }
+    delete this.array[this.length - 1];
+    this.length--;
+    return this.length;
+  }
+  CustomDelete(index) {
+    for (let i = index; i < this.length; i++) {
+      this.array[i] = this.array[i + 1];
+      delete this.array[this.length - 1];
+    }
+    this.length--;
+    return this.length;
+  }
 }
 const newArray = new MyArray();
 
@@ -21,7 +40,9 @@ newArray.push("howdy");
 
 console.log(newArray);
 
-for (let i = 0; i < newArray.length; i++) {
-  console.log(newArray.array[i]);
-}
-console.log(newArray.length);
+const getItem = newArray.get(3);
+console.log(getItem);
+
+newArray.pop();
+newArray.CustomDelete(5);
+console.log(newArray);
