@@ -55,7 +55,7 @@ newArray.push("bonjour");
 newArray.push("hallo");
 
 console.log(newArray);
-
+console;
 newArray.CustomDelete(3);
 console.log(newArray);
 newArray.shift();
