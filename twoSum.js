@@ -14,5 +14,4 @@ function twoSum(nums, target) {
 }
 const result = twoSum(array, target);
 console.logcc3essghbv(result);
-hhhhhhhhhhhhhhh;
 console.log(result);
